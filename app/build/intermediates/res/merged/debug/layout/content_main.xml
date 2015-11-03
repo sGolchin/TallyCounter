@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:showIn="@layout/activity_main" tools:context=".MainActivity"
+    android:paddingTop="?android:attr/actionBarSize">
+
+
+    <RelativeLayout
+        android:id="@+id/CounterRelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/InnerRelativeLayout"
+        android:layout_below="@id/toolbar"
+        >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/tv_Counter"
+        android:id="@+id/tvCounter"
+        android:textSize="120sp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/InnerRelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="88dp"
+        android:layout_alignParentBottom="true" >
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="2"
+            android:layout_gravity="bottom"
+            android:orientation="horizontal" >
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/bt_plus"
+                android:textSize="60sp"
+                android:id="@+id/btPlus" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/bt_minus"
+                android:textSize="60sp"
+                android:id="@+id/btMinus" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</RelativeLayout>
+<!-- From: file:/C:/Users/sarvenaz/AndroidStudioProjects/TallyCounter/app/src/main/res/layout/content_main.xml -->

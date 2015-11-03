@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Tally Counter</string>
+    <string name="action_settings">Settings</string>
+    <string name="tv_Counter">0</string>
+    <string name="tv_widget">0</string>
+    <string name="bt_plus">+</string>
+    <string name="bt_minus">-</string>
+    <string name="bt_reset">Reset</string>
+    <string name="bt_share">Share</string>
+</resources>

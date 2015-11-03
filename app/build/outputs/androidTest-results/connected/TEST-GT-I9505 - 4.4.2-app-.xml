@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuite name="com.android.builder.testing.ConnectedDevice" tests="1" failures="1" errors="0" skipped="0" time="21.797" timestamp="2015-11-03T11:05:23" hostname="localhost">
+  <properties>
+    <property name="device" value="GT-I9505 - 4.4.2" />
+    <property name="flavor" value="" />
+    <property name="project" value="app" />
+  </properties>
+  <testcase name="No tests found." classname="com.android.builder.testing.ConnectedDevice" time="0.018">
+    <failure>No tests found. This usually means that your test classes are not in the form that your test runner expects (e.g. don't inherit from TestCase or lack &#64;Test annotations).</failure>
+  </testcase>
+</testsuite>
