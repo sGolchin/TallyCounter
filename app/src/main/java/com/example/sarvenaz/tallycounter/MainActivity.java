@@ -1,6 +1,8 @@
 package com.example.sarvenaz.tallycounter;
 
 
+import android.appwidget.AppWidgetManager;
+import android.content.ComponentName;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
@@ -106,7 +108,16 @@ public class MainActivity extends AppCompatActivity {
           numberOfDays= counterManager.getCounter();
           counterView.setText("" + numberOfDays);
           bounceAnimation();
+          // Each time the CounterView is changed in the app, the counter in the widget should be updated
+          updateAllWidgets();
       }
+    private void updateAllWidgets(){
+        AppWidgetManager appWidgetManager = AppWidgetManager.getInstance(getApplicationContext());
+        int[] appWidgetIds = appWidgetManager.getAppWidgetIds(new ComponentName(this, WidgetProvider.class));
+        if (appWidgetIds.length > 0) {
+            new WidgetProvider().onUpdate(this, appWidgetManager, appWidgetIds);
+        }
+    }
 
     //start the bounce animation on counterView, this method should be called each time the value of counter is updated
     public void bounceAnimation(){
